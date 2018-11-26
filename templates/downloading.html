@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+{% if error3 %}
+<h1 align="center" color="red" class=error><strong></strong>{{ error3 }}
+{% endif %}
+<caption><center><strong>Files</strong></center></caption>
+
+<form action="/downloading "method="POST">
+<table align="center" border="0">
+
+
+<select name="todownload" required>
+{% for i in spisok %}
+<option>{{ i }}</option>
+{% endfor %}
+</select>
+
+
+</center></table>
+
+<input type="submit" name="download!" value="Download this file" class="btn btn-primary btn-large btn-block" >
+
+</form>
+
+
+			
+{% endblock %}

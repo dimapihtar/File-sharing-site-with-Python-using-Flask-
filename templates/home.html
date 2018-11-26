@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+	
+		
+<h1><center>Home Page</center></h1>
+
+{% if error2 %}
+<h1 align="center" color="red" class=error><strong></strong>{{ error2 }}
+{% endif %}
+<p>
+
+
+
+
+
+</p>
+<form action="/home/directory" method="POST">
+<input type="submit" name="show" value="Show directory" class="btn btn-primary btn-large btn-block" >
+
+</form>
+<form action="/delete" method="GET">
+<input type="submit" name="del" value="Delete file" class="btn btn-primary btn-large btn-block" >
+</form>
+<form action="/change" method="GET">
+<input type="submit" name="change" value="Change folder password" class="btn btn-primary btn-large btn-block" >
+</form>
+<form action="/download" method="GET">
+<input type="submit" name="download" value="Download file" class="btn btn-primary btn-large btn-block" >
+</form>
+<form action="/upload" method="POST">
+<input type="submit" name="upload" value="Upload file" class="btn btn-primary btn-large btn-block" >
+
+</form>
+<form action="/logout" method="POST">
+<input type="submit" name="logout" value="Log out" class="btn btn-primary btn-large btn-block" >
+
+</form>
+			
+{% endblock %}

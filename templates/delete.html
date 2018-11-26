@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+{% if error3 %}
+<h1 align="center" color="red" class=error><strong></strong>{{ error3 }}
+{% endif %}
+<caption><center><strong>Choose the file</strong></center></caption>
+
+
+
+<form method="POST">
+<select name="choose" required>
+{% for i in lst %}
+<option>{{ i }}</option>
+{% endfor %}
+</select>
+
+
+<input type="submit" name="delete" value="Delete this file" class="btn btn-primary btn-large btn-block" >
+
+</form>
+<form action="/back" method="POST">
+<input type="submit" name="back" value="Back to home page" class="btn btn-primary btn-large btn-block" >
+
+</form>
+
+			
+{% endblock %}

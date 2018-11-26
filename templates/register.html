@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="/" method="POST">
+
+<div class="login">
+		
+<div class="login-screen">
+			
+<div class="app-title">
+				
+<h1>Register</h1>
+			
+</div>
+ 
+			
+<div class="login-form">
+				
+<div class="control-group">
+				
+<input type="text" class="login-field" value="" placeholder="username" name="user">
+				
+<label class="login-field-icon fui-user" for="login-name"></label>
+				
+</div>
+ 
+				
+<div class="control-group">
+				
+<input type="password" class="login-field" value="" placeholder="password" name="pass">
+				
+<label class="login-field-icon fui-lock" for="login-pass"></label>
+				
+</div>
+
+<div class="control-group">
+				
+<input type="password" class="login-field" value="" placeholder="repeat password" name="repeat_password">
+				
+<label class="login-field-icon fui-lock" for="login-pass"></label>
+				
+</div>
+
+	 
+      
+ 
+<input type="submit" name="Registration" value="Registration" class="btn btn-primary btn-large btn-block" >
+
+<label class="login-field-icon fui-lock" for="login-pass"></label>
+			    
+<br>
+{% if error %}
+<p color="red" class=error><strong></strong> {{ error }}
+{% endif %}
+<br>
+</div>
+		
+</div>
+	
+</div>
+
+</form>
+ 
+
+{% endblock %}

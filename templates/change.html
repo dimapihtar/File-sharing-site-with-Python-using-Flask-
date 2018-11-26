@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+{% extends "layout.html" %}
+{% block body %}
+
+	
+<form method="POST">
+ 	
+<div class="login">
+		
+<div class="login-screen">
+			
+<div class="app-title">
+				
+<h1>Change folder password</h1>
+			
+</div>
+ 
+			
+			
+<div class="control-group">
+				
+<input type="password" class="login-field" value="" placeholder="new password" name="new password">
+				
+<label class="login-field-icon fui-lock" for="login-pass"></label>
+				
+</div>
+ 
+
+<div class="control-group">
+				
+<input type="password" class="login-field" value="" placeholder="repeat password" name="repeat password">
+				
+<label class="login-field-icon fui-lock" for="login-pass"></label>
+				
+</div>
+ 
+
+
+             
+<input type="submit" name="Change" value="Change" class="btn btn-primary btn-large btn-block" >
+
+</form>
+<p> </p>
+<form action="/back" method="POST">
+	
+<input type="submit" name="Back to home page" value="Back to home page" class="btn btn-primary btn-large btn-block" >
+
+</form>   
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+ <p class=flashes>
+{% for category, message in messages %}
+<li class="{{ category }}">{{ message }}</li>
+{% endfor %}
+</p>
+{% endif %}
+{% endwith %}
+{% if error1 %}
+<p color="red" class=error><strong></strong> {{ error1 }}
+{% endif %}
+			
+</div>
+		
+</div>
+	
+</div>
+
+{% endblock %}
